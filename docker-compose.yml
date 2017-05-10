@@ -1,0 +1,18 @@
+# docker-compose run devmachine
+# perl -I lib bin/altsql -d test -h mysql -p -u dev
+version: "2"
+services:
+  mysql:
+    image: mysql/mysql-server:5.7
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_DATABASE: test
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: devpass
+
+  devmachine:
+    image: quay.io/colinnewell/altsqlshell_devmachine:latest
+    volumes:
+      - ./:/home/developer
+    depends_on:
+      - mysql
