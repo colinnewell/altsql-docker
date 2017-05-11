@@ -11,7 +11,7 @@ services:
       MYSQL_PASSWORD: devpass
 
   devmachine:
-    image: quay.io/colinnewell/altsqlshell_devmachine:latest
+    image: quay.io/colinnewell/altsql-shell-developer:latest
     volumes:
       - ./:/home/developer
     depends_on:
