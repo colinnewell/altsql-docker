@@ -16,4 +16,9 @@ docker logs altsqlshell_mysql_1 2>&1 | grep "ROOT PASSWORD"
 
 Note that you ideally want the uid in the docker file to match your own. Run id to see your own uid.
 
+Docker images are been created automatically from this repo on quay.io.
 
+```
+docker pull quay.io/colinnewell/altsql-shell-developer # all the deps plus a dev user.
+docker pull quay.io/colinnewell/altsql-shell-core # base image with just the dependencies
+```
