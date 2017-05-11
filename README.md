@@ -3,7 +3,7 @@ The idea is to check out Alt-MySQL and drop these files in it's base directory. 
 ```
 git clone https://github.com/ewaters/altsql-shell.git
 cd altsql-shell
-# drop the docker files into this folder.
+# drop the docker-compose.yml file into this folder.
 docker-compose run devmachine
 perl -I lib bin/altsql -d test -h mysql -p -u dev
 ```
